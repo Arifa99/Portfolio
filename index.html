@@ -88,7 +88,7 @@
           </video>
 
         -->
-        <img src="Images/fitness.png" alt="" width="400" height="240">
+        <img src="Images/fitness.png" alt="" class="project_img">
 
         </div>
         <div class="work-info">
@@ -97,8 +97,9 @@
             <h3 class="platform">Web</h3>
             <p class="icons"><i class="fi-monitor"></i><i class="fi-tablet-portrait"></i><i class="fi-mobile"></i></p>
             <p>Newsletter page for fitness club.</p><br><br>
-            <a class="touch a_link active" target="_blank" href="https://boiling-tundra-92676.herokuapp.com/">Visit Website</a>
-            <a class="touch a_link" target="_blank" href="http://google.com" style="color: rgb(63, 4, 112);">Source Code</a>
+            <div class="btn_work"><a class="touch a_link active" target="_blank" href="https://boiling-tundra-92676.herokuapp.com/">Visit Website</a>
+              <a class="touch a_link" target="_blank" href="http://google.com" style="color: rgb(63, 4, 112);">Source Code</a></div>
+            
           </div>
         </div>
       </div>
@@ -113,12 +114,14 @@
             <h3 class="platform">Web</h3>
             <p class="icons"><i class="fi-monitor"></i><i class="fi-tablet-portrait"></i><i class="fi-mobile"></i></p>
             <p>A todo list app</p><br><br>
+            <div class="btn_work">
             <a class="touch a_link active" target="_blank" href="">Visit Website</a>
             <a class="touch a_link" target="_blank" href="http://google.com" style="color: rgb(63, 4, 112);">Source Code</a>
           </div>
+          </div>
         </div>
         <div class="work-img">
-          <img src="Images/todo.png" alt="" width="400" height="240">
+          <img src="Images/todo.png" alt="" class="project_img">
         </div>
       </div>
     </div>
@@ -159,7 +162,7 @@
     document.addEventListener('scroll', changeNavSize);
     function changeNavSize(e) {
       scroll = window.pageYOffset;
-      if (scroll > 400) {
+      if (scroll >= 400) {
         nav.style.paddingBottom = '1rem';
         nav.style.position = 'Sticky';
         profile.style.width = '10%';
@@ -167,6 +170,14 @@
         profile.style.position = 'Fixed';
         profile.style.marginTop = '-70px';
         profile.style.marginLeft = '45%';
+      }else if(scroll==0) {
+        nav.style.paddingBottom = '10rem';
+        nav.style.position = 'Auto';
+        profile.style.width = '20%';
+        profile.style.height = '240px';
+        profile.style.position = 'Absolute';
+        profile.style.marginTop = '-130px';
+        profile.style.marginLeft = '40%';
       }
     }
 
