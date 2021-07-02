@@ -137,14 +137,6 @@ a.line:hover:before {
   width: 100%;
 }
 
-.active{
-  background-color: var(--primary-text-color) !important;
-  color: white;
-}
-
-a{
-  color: white;
-}
 .top__container {
   text-align: center;
   position: relative;
@@ -183,7 +175,14 @@ a{
   color: white;
   margin: 1.2rem 1rem 1rem 1rem;
 }
+.btn_work a{
+  color: #143D59;
+}
 
+.active{
+  background-color: #143D59;
+  color: white !important;
+}
 
 .touch:hover {
   background-color: var(--primary-text-color);
@@ -251,13 +250,15 @@ a{
   margin-top: 100px;
 }
 
-.btn_work{
+.btn_work {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
+.btn_work a:hover{
+  
+}
 .test{
   background-color: yellowgreen;
   height: 40vh;
@@ -270,8 +271,8 @@ a{
 
 .project_img{
   min-width: auto;
-  max-width: 300px;
-  height: 240;
+  max-width: 450px;
+  height: 250;
 }
 .col_white{
   color:white;
