@@ -50,6 +50,7 @@ nav {
   border-top: none;
   border-left: none;
   border-right: none;
+  background-color:whitesmoke;
 }
 
 h3 {
@@ -288,6 +289,60 @@ a{
 .details{
   text-align: left;
 }
+
+.exp-container{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.timeline{
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul{
+  list-style-type: none;
+}
+
+.timeline ul li{
+  padding: 20px;
+  background-color: rgba(1, 1, 51, 0.63);
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 20px;
+}
+.timeline ul li:last-child{
+  margin-bottom: 0px;
+}
+
+.timeline-content h3{
+ font-size: 25px;
+ font-weight: 500;
+ line-height: 30px;
+ margin-bottom: 10px;
+ color: white;
+ text-align: left;
+}
+.timeline-content p{
+font-family: serif;
+color: white;
+font-size: 1.2rem;
+text-align: justify;
+}
+
+.timeline-content .date{
+text-align: left;
+font-size: 13px;
+font-weight: 300;
+margin-bottom: 10px;
+}
 /*--------------------------- Media Queries -------------*/
 
 @media (max-width: 880px) {
@@ -309,4 +364,67 @@ a{
     display: block;
   }
 
+}
+
+@media only screen and (min-width:768px){
+
+  .timeline ul li{
+    width: 50%;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  .timeline ul li:nth-child(odd){
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 10px 0px 10px 10px;
+  }
+
+  .timeline ul li:nth-child(even){
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 10px 10px 10px;
+  }
+
+  .timeline::before{
+    content: '';
+    height: 100%;
+    width: 2px;
+    margin-right: 50%;
+    background-color: blue;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  .timeline ul li::after{
+    content: '';
+    position:absolute;
+    height:20px;
+    width: 20px;
+    background-color: cadetblue;
+    border-radius: 50%;
+    top: 0;
+  }
+
+  .timeline ul li:nth-child(odd)::after{
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+
+  .timeline ul li:nth-child(even)::after{ 
+    transform: translate(-50%, -50%);
+    left:-30px;
+  }
+
+  .timeline ul li:hover:after
+  {
+    background-color: rgb(33, 77, 4);
+  }
+
+  .timeline-content .date{
+    position: absolute;
+    top:-20px;
+    color: var(--primary-text-color);
+  }
 }
